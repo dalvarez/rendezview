@@ -1,0 +1,38 @@
+<div id="text">
+
+<% if logged_in? -%>
+
+
+<h1>Edit Your R.S.V.P.</h1>
+
+<% form_for(@usermeeting) do |f| %>
+  <%= f.error_messages %>
+  <p>
+  Hello <%= @user.email %>, <br /><br />Please select your meeting:
+  <p>
+  	<%= f.select(:meeting_id, Meeting::MEETINGS_LIST, :prompt => "Select...") %>
+  </p>
+  <p>
+  	Will you attend this meeting? <br />
+  	<%= f.radio_button :is_attending, 1 %> Yes
+  </p>
+  <p>
+  	<%= f.radio_button :is_attending, 0 %> No
+  </p>
+  
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Show', @usermeeting %> |
+<%= link_to 'Back', usermeetings_path %>
+
+<% else -%>	
+
+Please login to continue.
+
+<% end -%>
+
+</div>

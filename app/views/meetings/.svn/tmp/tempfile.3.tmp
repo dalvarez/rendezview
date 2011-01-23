@@ -1,0 +1,128 @@
+<div id="text">
+
+
+<% if logged_in? -%>
+
+<p>
+  <b>Meeting Title:</b>
+  <%=h @meeting.title %>
+</p>
+<p>
+  <b>Agenda:</b>
+  <%=h @meeting.agenda %>
+</p>
+<p>
+  <b>Group:</b>
+  <%=h @meeting.group_id %>
+</p>
+<p>
+  <b>Period Start Date:</b>
+  <%=h @meeting.start_date %>
+</p>
+<p>
+  <b>Period End Date:</b>
+  <%=h @meeting.end_date %>
+</p>
+<p>
+  <b>Actual Date:</b>
+  <%=h @meeting.actual_date %>
+</p>
+<p>
+  <b>Actual Time:</b>
+  <% if !@meeting.actual_time.nil? %>
+  <%=h @meeting.actual_time.strftime("%I:%M%p") %>
+  <% end %>
+</p>
+<p>
+  <b>Invited:</b>
+  <%=h @meeting.attendees %>
+</p>
+<p>
+  <b>Attending:</b>
+  <% for attendee in @actual %>
+  	<%=h attendee.login %>
+  	
+  <% end %>
+
+  <% for attend in @actual %>
+    <table>
+      	<tr>
+      		<td></td>
+      		<td>Mon</td>
+      		<td>Tues</td>
+      		<td>Wed</td>
+      		<td>Thur</td>
+      		<td>Fri</td>
+      		<td>Sat</td>
+      		<td>Sun</td>
+    	</tr>
+    	<tr>
+	<% times = ["8:00 - 8:30", "8:30 - 9:00", "9:00 - 9:30", "9:30 - 10:00", "10:00 - 10:30", "10:30 - 11:00", "11:00 - 11:30", "11:30 - 12:00", "12:00 - 12:30", "12:30 - 1:00", "1:00 - 1:30", "1:30 - 2:00", "2:00 - 2:30", "2:30 - 3:00", "3:00 - 3:30", "3:30 - 4:00", "4:00 - 4:30", "4:30 - 5:00", "5:00 - 5:30", "5:30 - 6:00", "6:00 - 6:30", "6:30 - 7:00", "7:00 - 7:30", "7:30 - 8:00", "8:00 - 8:30", "8:30 - 9:00", "9:00 - 9:30", "9:30 - 10:00", "10:00 - 10:30", "10:30 - 11:00", "11:00 - 11:30", "11:30 - 12:00"] %> 	
+    <% x=0 %>
+    <% count = 0%>
+    <% timeindex = 0 %>
+  	<h2><%= attend.login %>'s Schedule: </h2>
+<<<<<<< .mine
+  	<% if !Schedule.find_by_user_id(attend.id).nil? %>
+  		<% s = Schedule.find_by_user_id(attend.id).time_string.split("") %>
+  	<% for time in s %>
+=======
+    <% if !Schedule.find_by_user_id(attend.id).nil? %>
+      <% s = Schedule.find_by_user_id(attend.id).time_string.split("") %>
+      <% for time in s %>
+>>>>>>> .r79
+  		<% if x % 7 == 0 %>
+  			<tr></tr>
+  			<td><%= times[timeindex] %></td>
+			<% timeindex = timeindex + 1 %>
+		<% end %>
+  		<td>
+  		<% if s[count] == '1' %>
+			<%= image_tag("/images/red.gif") %>
+			<% else %>
+			<%= image_tag("/images/green.gif") %>
+			<% end %>
+		  	 
+		
+
+  		<% count = count + 1 %>
+  		</td>
+  		<% x = x + 1 %>
+  	<% end %>
+<<<<<<< .mine
+  	<% end %>
+=======
+    <% end %>
+>>>>>>> .r79
+  <% end %>
+  </table> 
+</p>
+
+
+
+<% unless @comments.nil? %>
+	<h2>Comments: </h2>
+	<% for comment in @comments %>
+		<%= comment.text %><br />
+		- 
+		<%= @hash[comment].login %>
+		( <%= @hash[comment].email %> )
+		<br/> <br />
+	<% end %>
+<% end %>
+<%= link_to 'Add Comment', new_comment_path %>
+
+<br /><br /><br /><br />
+<%= link_to 'Edit this meeting', edit_meeting_path(@meeting) %> |
+
+<%= link_to 'Back to Dashboard', meetings_path %>
+
+
+
+<% else -%>	
+
+Please login to continue.
+
+<% end -%>
+
+</div>

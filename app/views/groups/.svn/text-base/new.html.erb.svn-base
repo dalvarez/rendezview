@@ -1,0 +1,25 @@
+<div id="text">
+
+<% if logged_in? -%>
+
+<h1>New group</h1>
+
+<% form_for(@group) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', groups_path %>
+
+<% else -%>
+
+Please login to continue.
+
+<% end -%>
+
+</div>
+
+

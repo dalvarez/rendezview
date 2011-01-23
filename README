@@ -1,0 +1,58 @@
+***************************************************
+INSTALLATION INSTRUCTIONS FOR DEPLOYING RENDEZVIEW
+updated 4/28/09
+
+This file will guide you in launching the 
+Rendezview application from your local machine.
+***************************************************
+
+Before proceeding, you will need to have the following software installed*
+
+For Windows:
+Ruby 1.8.7
+MySQL
+Rails 2.1.0
+Mozilla Firefox
+
+For Mac:
+MAMP server package
+Ruby 1.8.7
+Rails 2.1.0
+Mozilla Firefox
+
+For Linux:
+LAMP server package
+Ruby 1.8.7
+Rails 2.1.0
+Mozilla Firefox
+
+*these are the recommended programs, but you may use other programs to run 
+the application.
+
+
+LAUNCHING THE SERVER
+
+1. Open up a command line and navigate into the 'rendezview' directory. 
+2. Type 'rake db:create' and press Enter.
+3. Type 'rake db:migrate' and press Enter. 
+(These commands will populate your MySQL database with the necessary fields)
+4. Type 'script/server' 
+(This will launch Rendezview on port number 3000 by default)
+
+Open Firefox and type 'http://localhost:3000' in your address bar. 
+The application should be running and ready to use!
+
+
+OTHER NOTES
+
+If you are getting an error about your rails/gem version, 
+check the environment.rb file in the config directory. 
+Make sure that RAILS_GEM_VERSION = '2.1.0'
+
+Certain packages have their own web/mail servers installed -
+we recommend using the WEBrick server.
+
+On Windows, if you get the mysql error when trying to migrate,
+download http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll
+and put that in C:/ruby/bin/mysql 5.1
+ 

@@ -1,0 +1,21 @@
+<div id="text">
+
+<% if logged_in? -%>
+<p>
+Time String: <%= @schedule.time_string %>
+<%= @schedule.time_string.class %>
+</p>
+
+<% link_to(image_tag("/public/images/green.gif")) %>
+
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>
+
+<% else -%>
+
+Please login to continue.
+
+<% end -%>
+
+</div>

@@ -1,0 +1,30 @@
+<div id="text">
+
+<% if logged_in? -%>
+
+<h1>Listing usergroups</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for usergroup in @usergroups %>
+  <tr>
+    <td><%= link_to 'Show', usergroup %></td>
+    <td><%= link_to 'Edit', edit_usergroup_path(usergroup) %></td>
+    <td><%= link_to 'Destroy', usergroup, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New usergroup', new_usergroup_path %>
+
+<% else -%>	
+
+Please login to continue.
+
+<% end -%>
+
+</div>

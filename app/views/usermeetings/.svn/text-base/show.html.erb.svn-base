@@ -1,0 +1,14 @@
+<div id="text">
+
+<% if logged_in? -%>
+
+
+<%= link_to 'Edit', edit_usermeeting_path(@usermeeting) %> 
+
+<% else -%>	
+
+Please login to continue.
+
+<% end -%>
+
+</div>

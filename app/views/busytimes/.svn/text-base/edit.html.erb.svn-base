@@ -1,0 +1,12 @@
+<h1>Editing busytime</h1>
+
+<% form_for(@busytime) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @busytime %> |
+<%= link_to 'Back', busytimes_path %>

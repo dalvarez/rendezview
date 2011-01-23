@@ -1,0 +1,33 @@
+<div id="text">
+
+<% if logged_in? -%>
+
+
+<h1>Listing usermeetings</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for usermeeting in @usermeetings %>
+  <tr>
+  	<td><%= usermeeting.user_id %>
+  	<td><%= usermeeting.meeting_id %>
+    <td><%= link_to 'Show', usermeeting %></td>
+    <td><%= link_to 'Edit', edit_usermeeting_path(usermeeting) %></td>
+    <td><%= link_to 'Destroy', usermeeting, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New usermeeting', new_usermeeting_path %>
+
+<% else -%>	
+
+Please login to continue.
+
+<% end -%>
+
+</div>

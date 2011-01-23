@@ -1,0 +1,16 @@
+<h1>New busytime</h1>
+
+<% form_for(@busytime) do |f| %>
+  <%= f.error_messages %>
+
+    <% form_for(query check for all where type == tinyint) do |cell| %>
+    <p>
+      <button id= cell onclick="getElementById().value = True" >cell</button>
+    </p>
+    <% end %>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', busytimes_path %>

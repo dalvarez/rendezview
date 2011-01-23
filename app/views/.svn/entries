@@ -1,0 +1,101 @@
+9
+
+dir
+79
+svn://knight.hss.cmu.edu/team04_s09/app/views
+svn://knight.hss.cmu.edu/team04_s09
+
+
+
+2009-04-30T23:51:30.656250Z
+79
+team04_s09
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+343e1d5f-38fd-dd4c-918d-23ec59b8f0a9
+
+groups
+dir
+
+schedules
+dir
+
+layouts
+dir
+
+users
+dir
+
+forgot_email.html.erb
+file
+
+
+
+
+2009-04-20T03:55:45.000000Z
+c1a5298f939e87e8f962a5edfc206918
+2009-04-05T20:41:50.935625Z
+56
+team04_s09
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2
+
+meetingmailer
+dir
+
+busytimes
+dir
+
+comments
+dir
+
+sessions
+dir
+
+user_mailer
+dir
+
+home
+dir
+
+usermeetings
+dir
+
+meetings
+dir
+
+usergroups
+dir
+

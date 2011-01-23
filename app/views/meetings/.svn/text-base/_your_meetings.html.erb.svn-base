@@ -1,0 +1,82 @@
+<h1>Meetings You've Been Invited To:</h1>
+<table>
+	<tr>
+		<td>
+			<b>Title</b>
+		</td>
+		<td>
+			<b>Location</b>
+		</td>
+		<td>
+			<b>Time</b>
+		</td>
+		<td>
+			<b>Date</b>
+		</td>
+	</tr>
+<% for meeting in @invited %>
+	<tr>
+		<td>
+			<%=h meeting.title %>
+		</td>
+		<td>
+			<%=h meeting.location %> 
+		</td>
+		<td>
+			<% if !meeting.actual_time.nil? %>
+			<%=h meeting.actual_time.strftime("%I:%M%p") %>
+			<% end %>
+		</td>
+		<td>
+			<% if !meeting.actual_date.nil? %>
+			<%=h meeting.actual_date.strftime("%B %d ") %>
+			<% end %>
+		</td>
+		<td><%= link_to 'View', meeting %></td>
+		<td><%= link_to 'Edit RSVP', new_usermeeting_path %></td>
+		<br />
+	</tr>
+<% end %>
+</table>
+
+<h1>Meetings You're Attending:</h1>
+<table>
+	<tr>
+		<td>
+			<b>Title</b>
+		</td>
+		<td>
+			<b>Location</b>
+		</td>
+		<td>
+			<b>Time</b>
+		</td>
+		<td>
+			<b>Date</b>
+		</td>
+	</tr>
+<% for meeting in @temp %>
+	<tr>
+		<td>
+			<%=h meeting.title %>
+		</td>
+		<td>
+			<%=h meeting.location %> 
+		</td>
+		<td>
+			<% if !meeting.actual_time.nil? %>
+			<%=h meeting.actual_time.strftime("%I:%M%p") %>
+			<% end %>
+		</td>
+		<td>
+			<% if !meeting.actual_date.nil? %>
+			<%=h meeting.actual_date.strftime("%B %d ") %>
+			<% end %>
+		</td>
+		<td><%= link_to 'View', meeting %></td>
+		<td><%= link_to 'Edit RSVP', new_usermeeting_path %></td>
+		<br />
+	</tr>
+<% end %>
+</table>
+

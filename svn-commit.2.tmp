@@ -1,0 +1,11 @@
+fixed 500 internal server error
+changed 'edit meeting' to 'edit/finalize meeting'
+
+*this is the version getting archived.
+
+--This line, and those below, will be ignored--
+
+M    app/views/layouts/application.html.erb
+M    log/development.log
+M    db/schema.rb
+M    README

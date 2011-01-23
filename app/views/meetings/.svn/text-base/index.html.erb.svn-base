@@ -1,0 +1,19 @@
+<div id="text">
+
+<% if logged_in? -%>
+
+
+<%= render :partial => 'your_meetings' %>
+
+<br />
+
+<br /><br />
+<% else -%>	
+
+Please login to continue.
+
+<% end -%>
+
+</div>
+
+

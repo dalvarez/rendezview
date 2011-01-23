@@ -1,0 +1,16 @@
+<div id="text">
+
+<% if logged_in? -%>
+
+
+<%= link_to 'Edit', edit_usergroup_path(@usergroup) %> |
+<%= link_to 'Back', usergroups_path %>
+
+<% else -%>	
+
+Please login to continue.
+
+<% end -%>
+
+</div>
+

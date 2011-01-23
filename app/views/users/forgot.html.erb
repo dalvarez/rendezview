@@ -1,0 +1,19 @@
+<% form_for :user, :url => {:action => 'forgot'} do |form| %>
+     <fieldset>
+     <legend><strong>Password Reset Request</strong></legend>
+     <p>Enter the email address that you used to create your account.</p>
+         <p>
+             <label for="user_email" >Email Address:</label><br/>
+             <%= form.text_field :email, :size => 35, :class => 'text' %>
+         </p>
+		 <p>
+                <label for="user_password" >New Password</label><br/>
+                <%= form.password_field :password, :size => 45, :class => 'text' %>
+      </p>
+      <p>
+                <label for="user_password_confirmation" >Confirm New Password</label><br/>
+                <%= form.password_field :password_confirmation, :size => 45, :class => 'text' %>
+            </p>
+         <%= submit_tag 'Reset Password' %>
+     </fieldset>
+<% end %>

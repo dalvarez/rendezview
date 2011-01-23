@@ -1,0 +1,34 @@
+9
+
+dir
+79
+svn://knight.hss.cmu.edu/team04_s09/vendor/plugins
+svn://knight.hss.cmu.edu/team04_s09
+
+
+
+2009-03-22T22:30:36.184250Z
+40
+team04_s09
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+343e1d5f-38fd-dd4c-918d-23ec59b8f0a9
+
+acts_as_state_machine
+dir
+
+restful_authentication
+dir
+

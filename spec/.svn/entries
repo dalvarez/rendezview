@@ -1,0 +1,40 @@
+9
+
+dir
+79
+svn://knight.hss.cmu.edu/team04_s09/spec
+svn://knight.hss.cmu.edu/team04_s09
+
+
+
+2009-03-16T03:44:18.156250Z
+32
+team04_s09
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+343e1d5f-38fd-dd4c-918d-23ec59b8f0a9
+
+helpers
+dir
+
+models
+dir
+
+controllers
+dir
+
+fixtures
+dir
+

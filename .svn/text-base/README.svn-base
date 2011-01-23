@@ -1,0 +1,4 @@
+on windows, if you get the mysql error when trying to migrate
+download http://instantrails.rubyforge.org/svn/trunk/InstantRails-win/InstantRails/mysql/bin/libmySQL.dll
+and put that in C:/ruby/bin/
+mysql 5.1

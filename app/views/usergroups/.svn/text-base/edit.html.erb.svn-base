@@ -1,0 +1,25 @@
+<div id="text">
+
+<% if logged_in? -%>
+
+
+<h1>Editing usergroup</h1>
+
+<% form_for(@usergroup) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @usergroup %> |
+<%= link_to 'Back', usergroups_path %>
+
+<% else -%>	
+
+Please login to continue.
+
+<% end -%>
+
+</div>

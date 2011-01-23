@@ -1,0 +1,23 @@
+<% unless logged_in? -%>
+
+
+	<% end -%>		
+
+	
+<div id="text">
+	<div id="hometext">
+		
+		<p><img src="images/screenshot.jpg" width = "160"/>
+			
+		RendezView is a web-based application that will help manage the process of scheduling meeting times by implementing a collaborative scheduling system. The application aims to reduce the time and effort related with such scheduling. <br /><br />
+		
+	<% unless logged_in? -%>	
+		
+		To sign up, please <%= link_to 'click here.', new_user_path %>
+
+      <%  end %>
+</p>
+		
+</div>
+</div>
+

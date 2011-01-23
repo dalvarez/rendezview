@@ -1,0 +1,14 @@
+<div id="text">
+
+<% if logged_in? -%>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>
+
+<% else -%>	
+
+Please login to continue.
+
+<% end -%>
+
+</div>

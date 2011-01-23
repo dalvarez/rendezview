@@ -1,0 +1,28 @@
+fixed some meeting stuff - hosts are now functioning
+formatted schedules a little better even though they are still broke
+
+--This line, and those below, will be ignored--
+
+M    app/helpers/application_helper.rb
+M    app/models/user.rb
+M    app/models/user_observer.rb
+M    app/models/user_mailer.rb
+M    app/models/meeting.rb
+M    app/controllers/meetings_controller.rb
+M    app/controllers/schedules_controller.rb
+M    app/controllers/users_controller.rb
+M    app/views/schedules/edit.html.erb
+M    app/views/schedules/new.html.erb
+A    app/views/users/change_password.html.erb
+A    app/views/users/forgot_password.html.erb
+A    app/views/users/reset_password.html.erb
+M    app/views/meetingmailer/meeting_notification.html.erb
+M    app/views/sessions/new.html.erb
+A    app/views/user_mailer/forgot_password.html.erb
+A    app/views/user_mailer/reset_password.html.erb
+M    app/views/meetings/edit.html.erb
+M    app/views/meetings/show.html.erb
+M    log/development.log
+M    db/schema.rb
+M    db/migrate/20090316002615_create_users.rb
+M    config/environments/development.rb

@@ -1,0 +1,18 @@
+<h1>Listing busytimes</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for busytime in @busytimes %>
+  <tr>
+    <td><%= link_to 'Show', busytime %></td>
+    <td><%= link_to 'Edit', edit_busytime_path(busytime) %></td>
+    <td><%= link_to 'Destroy', busytime, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New busytime', new_busytime_path %>

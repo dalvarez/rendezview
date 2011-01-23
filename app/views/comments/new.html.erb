@@ -1,0 +1,32 @@
+<div id="text">
+
+<% if logged_in? -%>
+
+<h2>Add a comment: </h2>
+
+<% form_for(@comment) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+  	Select the meeting you would like to comment on: <br />
+  	<%= f.select(:meeting_id, Meeting::MEETINGS_LIST, :prompt => "Select...") %>
+  </p>
+  <p>
+  	<%= f.label :text, "Text" %> <br />
+  	<%= f.text_area :text %>
+  </p>
+  <p>
+  	<%= f.hidden_field :user_id, :value => @user.id %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<% else -%>	
+
+Please login to continue.
+
+<% end -%>
+
+</div>
